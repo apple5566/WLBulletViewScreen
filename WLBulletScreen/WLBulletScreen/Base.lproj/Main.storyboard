@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFX-lF-cSp" customClass="WLBulletView">
+                                <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-D8-0S3">
+                                <rect key="frame" x="16" y="12" width="46" height="30"/>
+                                <state key="normal" title="再发送"/>
+                                <connections>
+                                    <action selector="sendData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Elu-Bk-tzD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTY-4h-0fE">
+                                <rect key="frame" x="92" y="12" width="62" height="30"/>
+                                <state key="normal" title="关闭弹幕"/>
+                                <connections>
+                                    <action selector="closeBullet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnq-ic-WAz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-5g-eRd">
+                                <rect key="frame" x="184" y="12" width="62" height="30"/>
+                                <state key="normal" title="打开弹幕"/>
+                                <connections>
+                                    <action selector="openBullet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VS5-d3-esb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lTY-4h-0fE" firstAttribute="leading" secondItem="5Y9-D8-0S3" secondAttribute="trailing" constant="30" id="7We-f3-5gF"/>
+                            <constraint firstItem="lTY-4h-0fE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="12" id="Hto-fe-Uee"/>
+                            <constraint firstAttribute="bottom" secondItem="dFX-lF-cSp" secondAttribute="bottom" constant="50" id="JVu-av-bUP"/>
+                            <constraint firstItem="q3e-5g-eRd" firstAttribute="leading" secondItem="lTY-4h-0fE" secondAttribute="trailing" constant="30" id="RXA-y0-C6A"/>
+                            <constraint firstItem="dFX-lF-cSp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b9m-SH-YaE"/>
+                            <constraint firstItem="dFX-lF-cSp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="i52-sx-aY6"/>
+                            <constraint firstItem="q3e-5g-eRd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="12" id="igu-aa-Y40"/>
+                            <constraint firstItem="5Y9-D8-0S3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kM8-4k-KBh"/>
+                            <constraint firstAttribute="trailing" secondItem="dFX-lF-cSp" secondAttribute="trailing" id="mAl-KL-Nmh"/>
+                            <constraint firstItem="5Y9-D8-0S3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="rBe-NM-LjP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bulletView" destination="dFX-lF-cSp" id="zQ6-0T-uKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="50"/>
+        </scene>
+    </scenes>
+</document>
